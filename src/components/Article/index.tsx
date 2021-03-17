@@ -1,8 +1,8 @@
 import * as React from 'react'
+import { API_KEY, API_URL } from '@env'
 import {
   View,
   Text,
-  Image,
   ScrollView,
   StyleSheet,
   ScrollViewProps
@@ -44,7 +44,7 @@ export default function Article({
           <Text style={[styles.timestamp, { color: colors.text }]}>{date}</Text>
         </View>
       </View>
-      <Text style={[styles.title, { color: colors.text }]}>Lorem Ipsum</Text>
+      <Text style={[styles.title, { color: colors.text }]}>{API_URL}</Text>
       <Text style={[styles.paragraph, { color: colors.text }]}>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it

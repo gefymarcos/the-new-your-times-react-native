@@ -2,7 +2,11 @@ import * as React from 'react'
 import { StyleSheet } from 'react-native'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
-import Article from '../Article'
+import { useDispatch } from 'react-redux';
+import { loadArticlesAction } from '../../modules/articles/actions';
+import Science from '../../pages/Science'
+import Technology from '../../pages/Technology'
+import theme from '../../styles/theme'
 
 type MaterialBottomTabParams = {
   TabScience: undefined
@@ -12,26 +16,38 @@ type MaterialBottomTabParams = {
 const MaterialBottomTabs = createMaterialBottomTabNavigator<MaterialBottomTabParams>()
 
 const Tabs = () => {
+  const dispatch = useDispatch()
+
   return (
     <NavigationContainer>
       <MaterialBottomTabs.Navigator barStyle={styles.tabBar}>
         <MaterialBottomTabs.Screen
           name="TabScience"
-          component={Article}
+          component={Science}
           options={{
             tabBarLabel: 'Science',
             tabBarIcon: 'test-tube',
-            tabBarColor: '#9FD5C9'
+            tabBarColor: theme.colors.lightGray,
+          }}
+          listeners={{
+            tabPress: () => {
+              dispatch(loadArticlesAction('science'));
+            }
           }}
           key='TabScience'
         />
         <MaterialBottomTabs.Screen
           name="TabTechnology"
-          component={Article}
+          component={Technology}
           options={{
             tabBarLabel: 'Technology',
             tabBarIcon: 'tablet-dashboard',
-            tabBarColor: '#9FD5C9'
+            tabBarColor: theme.colors.lightGray
+          }}
+          listeners={{
+            tabPress: () => {
+              dispatch(loadArticlesAction('technology'));
+            }
           }}
           key='TabTechnology'
         />
@@ -42,7 +58,7 @@ const Tabs = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: 'white'
+    backgroundColor: theme.colors.black
   }
 })
 
