@@ -1,10 +1,9 @@
 export default {
   grid: {
-    container: '130rem',
-    gutter: '3.2rem'
+    gutter: 32
   },
   border: {
-    radius: '0.4rem'
+    radius: 4
   },
   font: {
     family:
@@ -13,32 +12,31 @@ export default {
     normal: 400,
     bold: 600,
     sizes: {
-      xsmall: '1.2rem',
-      small: '1.4rem',
-      medium: '1.6rem',
-      large: '1.8rem',
-      xlarge: '2.0rem',
-      xxlarge: '2.8rem'
+      xsmall: 12,
+      small: 14,
+      medium: 16,
+      large: 18,
+      xlarge: 20,
+      xxlarge: 28
     }
   },
   colors: {
-    primary: '#F231A5',
-    secondary: '#3CD3C1',
-    mainBg: '#06092B',
+    primary: '#FAFAFA',
+    secondary: '#212121',
+    mainBg: '#FAFAFA',
     white: '#FAFAFA',
-    black: '#030517',
-    lightGray: '#EAEAEA',
-    gray: '#8F8F8F',
-    darkGray: '#2E2F42'
+    black: '#212121',
+    lightGray: '#9e9e9e',
+    gray: '#424242',
   },
   spacings: {
-    xxsmall: '0.8rem',
-    xsmall: '1.6rem',
-    small: '2.4rem',
-    medium: '3.2rem',
-    large: '4.0rem',
-    xlarge: '4.8rem',
-    xxlarge: '5.6rem'
+    xxsmall: 8,
+    xsmall: 16,
+    small: 24,
+    medium: 32,
+    large: 40,
+    xlarge: 48,
+    xxlarge: 56
   },
   layers: {
     base: 10,
