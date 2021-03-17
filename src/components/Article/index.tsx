@@ -1,33 +1,33 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   View,
   Text,
   Image,
   ScrollView,
   StyleSheet,
-  ScrollViewProps,
-} from 'react-native';
-import { useScrollToTop, useTheme } from '@react-navigation/native';
+  ScrollViewProps
+} from 'react-native'
+import { useScrollToTop, useTheme } from '@react-navigation/native'
 
 type Props = Partial<ScrollViewProps> & {
-  date?: string;
+  date?: string
   author?: {
-    name: string;
-  };
-};
+    name: string
+  }
+}
 
 export default function Article({
   date = '1st Jan 2025',
   author = {
-    name: 'Knowledge Bot',
+    name: 'Knowledge Bot'
   },
   ...rest
 }: Props) {
-  const ref = React.useRef<ScrollView>(null);
+  const ref = React.useRef<ScrollView>(null)
 
-  useScrollToTop(ref);
+  useScrollToTop(ref)
 
-  const { colors } = useTheme();
+  const { colors } = useTheme()
 
   return (
     <ScrollView
@@ -37,7 +37,6 @@ export default function Article({
       {...rest}
     >
       <View style={styles.author}>
-
         <View style={styles.meta}>
           <Text style={[styles.name, { color: colors.text }]}>
             {author.name}
@@ -67,53 +66,53 @@ export default function Article({
         1.10.32.
       </Text>
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   content: {
-    paddingVertical: 16,
+    paddingVertical: 16
   },
   author: {
     flexDirection: 'row',
     marginVertical: 8,
-    marginHorizontal: 16,
+    marginHorizontal: 16
   },
   meta: {
     marginHorizontal: 8,
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   name: {
     fontWeight: 'bold',
     fontSize: 16,
-    lineHeight: 24,
+    lineHeight: 24
   },
   timestamp: {
     opacity: 0.5,
     fontSize: 14,
-    lineHeight: 21,
+    lineHeight: 21
   },
   avatar: {
     height: 48,
     width: 48,
-    borderRadius: 24,
+    borderRadius: 24
   },
   title: {
     fontWeight: 'bold',
     fontSize: 36,
     marginVertical: 8,
-    marginHorizontal: 16,
+    marginHorizontal: 16
   },
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
     marginVertical: 8,
-    marginHorizontal: 16,
+    marginHorizontal: 16
   },
   image: {
     width: '100%',
     height: 200,
     resizeMode: 'cover',
-    marginVertical: 8,
-  },
-});
+    marginVertical: 8
+  }
+})
