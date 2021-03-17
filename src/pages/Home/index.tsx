@@ -1,9 +1,9 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import Home from './src/pages/Home';
+import Tabs from 'components/Tabs';
 
-export default function App() {
+export default function Home() {
   return (
-    <Home />
+    <Tabs />
   );
 }
