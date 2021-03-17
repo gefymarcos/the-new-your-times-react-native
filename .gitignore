@@ -9,7 +9,16 @@ npm-debug.*
 *.orig.*
 web-build/
 
+# testing
+/coverage
+
 # macOS
 .DS_Store
 
+# local env files
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
