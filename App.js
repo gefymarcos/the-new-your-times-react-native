@@ -1,4 +1,4 @@
-import {API_URL} from "@env"
+import { API_URL } from "@env"
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
