@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Text, View, StyleSheet, TouchableNativeFeedback } from 'react-native'
 import theme from '../../styles/theme'
 import { showArticleDetailAction } from '../../modules/articles/actions'

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Dispatch } from 'react'
 import { get } from '../../api'
 import * as constants from './constants'
 import { ArticleProps } from './types'
@@ -41,7 +43,7 @@ const selectArticleFullRejected = (err: string) => {
 }
 
 const selectArticleAction = async (articles: ArticleProps) => {
-  return async (dispatch: any) => {
+  return async (dispatch: Dispatch<any>) => {
     dispatch(selectArticlesRequest())
     try {
       return dispatch(selectArticleFullFilled(articles))
@@ -57,7 +59,7 @@ const fetchArticles = async (section: string) => {
 }
 
 const loadArticlesAction = (section: string) => {
-  return async (dispatch: any) => {
+  return async (dispatch: Dispatch<any>) => {
     dispatch(articlesRequest())
     try {
       const articles: any = await fetchArticles(section)
@@ -69,10 +71,8 @@ const loadArticlesAction = (section: string) => {
   }
 }
 
-const showArticleDetailFullFilled = (article: ArticleProps) => {}
-
 const showArticleDetailAction = ({ title, abstract, url }: cardProps) => {
-  return async (dispatch: any) => {
+  return async (dispatch: Dispatch<any>) => {
     dispatch({
       type: constants.ARTICLE_DETAIL_FULLFILLED,
       payload: { title, abstract, url }
@@ -81,7 +81,7 @@ const showArticleDetailAction = ({ title, abstract, url }: cardProps) => {
 }
 
 const clearArticleSelectedAction = () => {
-  return async (dispatch: any) => {
+  return async (dispatch: Dispatch<any>) => {
     dispatch({ type: constants.CLEAR_ARTICLE_DETAIL })
   }
 }

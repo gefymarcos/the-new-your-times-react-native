@@ -17,6 +17,7 @@ const initialState: ArticlesStoreProps = {
 
 const articlesReducer = (
   state = Object.assign({}, initialState),
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   action: any
 ) => {
   const { type, payload } = action

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
 import {
   ScrollView,
@@ -29,8 +30,8 @@ export default function Articles({
   const article = useSelector((state: any) => state?.articles?.articleDetail)
 
   React.useEffect(() => {
-    dispatch(loadArticlesAction('science'))
-  }, [])
+    dispatch(loadArticlesAction(section))
+  }, [dispatch, section])
 
   const ref = React.useRef<ScrollView>(null)
 

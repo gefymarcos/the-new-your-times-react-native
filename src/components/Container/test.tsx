@@ -9,7 +9,7 @@ jest.useFakeTimers()
 
 describe('<Tabs />', () => {
   it('should render correctly', () => {
-    const { getByText, container } = render(
+    const { getByText } = render(
       <Container>
         <Text>teste</Text>
       </Container>

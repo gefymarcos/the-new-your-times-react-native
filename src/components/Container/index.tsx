@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View, StyleSheet, ViewPropTypes } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 
 type containerProps = {
   children: React.ReactNode
