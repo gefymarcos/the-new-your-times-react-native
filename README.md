@@ -1,13 +1,13 @@
 # Avaliação React Native
 
-A aplicação é um portal de notícias utilizando React Native para exibição de notícias do The New York Times.
+A aplicação é um portal de notícias utilizando React Native para exibição de artigos do The New York Times.
 
 ## Features
 
 - Consumo da API do The New York Times;
 - Listas de notícias das categorias "Technology" e "Science";
 - Visualização de mais informações da noticia ao clicar em alguma;
-- Navegação através da URL para o site com o artigo original;
+- Navegação através da URL para o site com o artigo original.
 
 ## Running
 
@@ -22,4 +22,11 @@ A aplicação é um portal de notícias utilizando React Native para exibição 
 - ```yarn start``` : Executar a aplicação;
 - ```yarn android``` : Executar a aplicação no simulador Android;
 - ```yarn ios``` : Executar a aplicação no simulador Ios;
-- ```yarn test```: Executar os testes da aplicação;
+- ```yarn test```: Executar os testes da aplicação.
+
+## TODOs
+
+- Criar o type para o RootState e remover as declarações any;
+- Usar o tema em todos os estilos da aplicação;
+- Configurar o absolute path;
+- Aumentar cobertura de teste.
