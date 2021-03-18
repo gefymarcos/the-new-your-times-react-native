@@ -23,11 +23,8 @@ const BackDrop = ({ title, abstract, url }: ArticleProps) => {
 
   const OpenUrlLink = ({ url }: openUrlLink) => {
     const handlePress = useCallback(async () => {
-      const supported = await Linking.canOpenURL(url)
-
-      if (supported) {
-        await Linking.openURL(url)
-      }
+      await Linking.canOpenURL(url)
+      await Linking.openURL(url)
     }, [url])
 
     return <Button title={url} onPress={handlePress} />
@@ -36,6 +33,7 @@ const BackDrop = ({ title, abstract, url }: ArticleProps) => {
   return (
     <View style={styles.centeredView}>
       <Modal
+        testID="modal-custom"
         animationType="slide"
         transparent={true}
         visible={modalVisible}

@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackDrop /> should render correctly based on snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+      "marginTop": 22,
+    }
+  }
+>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    testID="modal-custom"
+    transparent={true}
+    visible={true}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "marginTop": 22,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderRadius": 20,
+            "elevation": 5,
+            "flex": 1,
+            "marginTop": 50,
+            "padding": 35,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 4,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "justifyContent": "center",
+              "paddingVertical": 32,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#212121",
+                "fontSize": 18,
+                "fontWeight": "600",
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+              }
+            }
+          >
+            Title of card
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#212121",
+                "fontSize": 16,
+                "lineHeight": 24,
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+              }
+            }
+          >
+            Description
+          </Text>
+          <View
+            accessibilityRole="button"
+            accessibilityState={Object {}}
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {},
+                ]
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#007AFF",
+                      "fontSize": 18,
+                      "margin": 8,
+                      "textAlign": "center",
+                    },
+                  ]
+                }
+              >
+                https://myurl.com.br
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "borderRadius": 20,
+                "elevation": 2,
+                "padding": 10,
+              },
+              Object {
+                "backgroundColor": "#212121",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "width": 150,
+              }
+            }
+          >
+            Back
+          </Text>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`

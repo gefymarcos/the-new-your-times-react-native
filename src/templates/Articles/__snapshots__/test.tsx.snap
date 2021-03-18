@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Articles /> should render correctly based on snapshot 1`] = `
+Array [
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "paddingTop": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "flex-end",
+        },
+      ]
+    }
+  >
+    <Text>
+      Não foi possível carregar as informações agora, tente novamente mais tarde.
+    </Text>
+  </View>,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "paddingVertical": 16,
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "#FAFAFA",
+      }
+    }
+    testID="scrollView"
+  >
+    <View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "borderBottomColor": "#212121",
+            "borderBottomWidth": 1,
+            "marginHorizontal": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "justifyContent": "center",
+              "paddingVertical": 32,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#212121",
+                "fontSize": 18,
+                "fontWeight": "600",
+                "marginHorizontal": 16,
+                "marginVertical": 8,
+              }
+            }
+          >
+            teste
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
+`

@@ -3,14 +3,19 @@
 exports[`<Tabs /> should render correctly based on snapshot 1`] = `
 <View
   style={
-    Object {
-      "flex": 1,
-      "paddingTop": 20,
-    }
+    Array [
+      Object {
+        "flex": 1,
+        "paddingTop": 20,
+      },
+      Object {
+        "justifyContent": "flex-start",
+      },
+    ]
   }
 >
   <Text>
     teste
   </Text>
 </View>
-`;
+`

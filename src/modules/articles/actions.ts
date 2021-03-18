@@ -24,42 +24,12 @@ const articlesFullRejected = (err: string) => {
   }
 }
 
-const selectArticlesRequest = () => ({
-  type: constants.ARTICLE_SELECTED_REQUEST
-})
-
-const selectArticleFullFilled = (data: ArticleProps) => {
-  return {
-    type: constants.ARTICLE_SELECTED_FULLFILLED,
-    payload: data
-  }
-}
-
-const selectArticleFullRejected = (err: string) => {
-  return {
-    type: constants.ARTICLE_SELECTED_REJECTED,
-    payload: err
-  }
-}
-
-const selectArticleAction = async (articles: ArticleProps) => {
-  return async (dispatch: Dispatch<any>) => {
-    dispatch(selectArticlesRequest())
-    try {
-      return dispatch(selectArticleFullFilled(articles))
-    } catch (err) {
-      console.log('err at selected articles', err)
-      dispatch(selectArticleFullRejected(err))
-    }
-  }
-}
-
 const fetchArticles = async (section: string) => {
   return await get({ url: endpoints.articles(section) })
 }
 
 const loadArticlesAction = (section: string) => {
-  return async (dispatch: Dispatch<any>) => {
+  return async (dispatch: any) => {
     dispatch(articlesRequest())
     try {
       const articles: any = await fetchArticles(section)
@@ -88,7 +58,6 @@ const clearArticleSelectedAction = () => {
 
 export {
   loadArticlesAction,
-  selectArticleAction,
   showArticleDetailAction,
   clearArticleSelectedAction
 }

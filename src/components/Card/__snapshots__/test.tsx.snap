@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render correctly based on snapshot 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "borderBottomColor": "#212121",
+      "borderBottomWidth": 1,
+      "marginHorizontal": 16,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "paddingVertical": 32,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#212121",
+          "fontSize": 18,
+          "fontWeight": "600",
+          "marginHorizontal": 16,
+          "marginVertical": 8,
+        }
+      }
+    >
+      Title of card
+    </Text>
+  </View>
+</View>
+`

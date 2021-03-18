@@ -48,166 +48,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
             "top": 0,
           }
         }
-      >
-        <RCTScrollView
-          contentContainerStyle={
-            Object {
-              "paddingVertical": 16,
-            }
-          }
-          navigation={
-            Object {
-              "addListener": [Function],
-              "canGoBack": [Function],
-              "dangerouslyGetParent": [Function],
-              "dangerouslyGetState": [Function],
-              "dispatch": [Function],
-              "goBack": [Function],
-              "isFocused": [Function],
-              "jumpTo": [Function],
-              "navigate": [Function],
-              "removeListener": [Function],
-              "reset": [Function],
-              "setOptions": [Function],
-              "setParams": [Function],
-            }
-          }
-          route={
-            Object {
-              "key": "TabScience-3VWEQmA_RlTPWNAdeAFSA",
-              "name": "TabScience",
-              "params": undefined,
-            }
-          }
-          style={
-            Object {
-              "backgroundColor": "rgb(255, 255, 255)",
-            }
-          }
-        >
-          <View>
-            <View
-              style={
-                Object {
-                  "flexDirection": "row",
-                  "marginHorizontal": 16,
-                  "marginVertical": 8,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "justifyContent": "center",
-                    "marginHorizontal": 8,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Array [
-                      Object {
-                        "fontSize": 16,
-                        "fontWeight": "bold",
-                        "lineHeight": 24,
-                      },
-                      Object {
-                        "color": "rgb(28, 28, 30)",
-                      },
-                    ]
-                  }
-                >
-                  Knowledge Bot
-                </Text>
-                <Text
-                  style={
-                    Array [
-                      Object {
-                        "fontSize": 14,
-                        "lineHeight": 21,
-                        "opacity": 0.5,
-                      },
-                      Object {
-                        "color": "rgb(28, 28, 30)",
-                      },
-                    ]
-                  }
-                >
-                  1st Jan 2025
-                </Text>
-              </View>
-            </View>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "fontSize": 36,
-                    "fontWeight": "bold",
-                    "marginHorizontal": 16,
-                    "marginVertical": 8,
-                  },
-                  Object {
-                    "color": "rgb(28, 28, 30)",
-                  },
-                ]
-              }
-            >
-              Lorem Ipsum
-            </Text>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                    "marginHorizontal": 16,
-                    "marginVertical": 8,
-                  },
-                  Object {
-                    "color": "rgb(28, 28, 30)",
-                  },
-                ]
-              }
-            >
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-            </Text>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                    "marginHorizontal": 16,
-                    "marginVertical": 8,
-                  },
-                  Object {
-                    "color": "rgb(28, 28, 30)",
-                  },
-                ]
-              }
-            >
-              Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-            </Text>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                    "marginHorizontal": 16,
-                    "marginVertical": 8,
-                  },
-                  Object {
-                    "color": "rgb(28, 28, 30)",
-                  },
-                ]
-              }
-            >
-              Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            </Text>
-          </View>
-        </RCTScrollView>
-      </View>
+      />
     </View>
   </View>
   <View
@@ -215,7 +56,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
     pointerEvents="none"
     style={
       Object {
-        "backgroundColor": "white",
+        "backgroundColor": "#212121",
         "bottom": 0,
         "elevation": 4,
         "left": 0,
@@ -240,7 +81,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "white",
+          "backgroundColor": "#212121",
           "overflow": "hidden",
         }
       }
@@ -321,7 +162,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
                         "backgroundColor": "transparent",
                       },
                       Object {
-                        "color": "#000000",
+                        "color": "#ffffff",
                         "fontSize": 24,
                       },
                     ]
@@ -350,7 +191,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
                         "backgroundColor": "transparent",
                       },
                       Object {
-                        "color": "rgba(0, 0, 0, 0.5)",
+                        "color": "rgba(255, 255, 255, 0.5)",
                         "fontSize": 24,
                       },
                     ]
@@ -440,7 +281,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
                           "textAlign": "center",
                         },
                         Object {
-                          "color": "#000000",
+                          "color": "#ffffff",
                         },
                       ],
                     ]
@@ -480,7 +321,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
                           "textAlign": "center",
                         },
                         Object {
-                          "color": "rgba(0, 0, 0, 0.5)",
+                          "color": "rgba(255, 255, 255, 0.5)",
                         },
                       ],
                     ]
@@ -554,7 +395,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
                         "backgroundColor": "transparent",
                       },
                       Object {
-                        "color": "#000000",
+                        "color": "#ffffff",
                         "fontSize": 24,
                       },
                     ]
@@ -583,7 +424,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
                         "backgroundColor": "transparent",
                       },
                       Object {
-                        "color": "rgba(0, 0, 0, 0.5)",
+                        "color": "rgba(255, 255, 255, 0.5)",
                         "fontSize": 24,
                       },
                     ]
@@ -673,7 +514,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
                           "textAlign": "center",
                         },
                         Object {
-                          "color": "#000000",
+                          "color": "#ffffff",
                         },
                       ],
                     ]
@@ -713,7 +554,7 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
                           "textAlign": "center",
                         },
                         Object {
-                          "color": "rgba(0, 0, 0, 0.5)",
+                          "color": "rgba(255, 255, 255, 0.5)",
                         },
                       ],
                     ]
@@ -729,4 +570,4 @@ exports[`<Tabs /> should render correctly based on snapshot 1`] = `
     </View>
   </View>
 </View>
-`;
+`

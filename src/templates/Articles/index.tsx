@@ -7,7 +7,7 @@ import {
   ActivityIndicator,
   Text
 } from 'react-native'
-import { useScrollToTop } from '@react-navigation/native'
+// import { useScrollToTop } from '@react-navigation/native'
 import { loadArticlesAction } from '../../modules/articles/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import { ArticleProps } from 'modules/articles/types'
@@ -26,16 +26,16 @@ export default function Articles({
 }: articleTemplateProps) {
   const dispatch = useDispatch()
   const articles = useSelector((state: any) => state?.articles?.data)
-  const error = useSelector((state: any) => state?.articles?.errorMsg)
   const article = useSelector((state: any) => state?.articles?.articleDetail)
+  const error = useSelector((state: any) => state?.articles?.errorMsg)
 
   React.useEffect(() => {
     dispatch(loadArticlesAction(section))
   }, [dispatch, section])
 
-  const ref = React.useRef<ScrollView>(null)
+  // const ref = React.useRef<ScrollView>(null)
 
-  useScrollToTop(ref)
+  // useScrollToTop(ref)
 
   return (
     <>
@@ -48,14 +48,15 @@ export default function Articles({
           </Text>
         </Container>
       )}
-      {articles.length === 0 && !error && !article?.title && (
+      {articles?.length === 0 && !error && !article?.title && (
         <Container alignContent="center">
           <ActivityIndicator size="large" color={theme.colors.secondary} />
         </Container>
       )}
       {!!articles && (
         <ScrollView
-          ref={ref}
+          // ref={ref}
+          testID="scrollView"
           style={styles.container}
           contentContainerStyle={styles.content}
           {...rest}
