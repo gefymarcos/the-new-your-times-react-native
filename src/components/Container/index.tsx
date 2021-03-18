@@ -9,8 +9,6 @@ const Container = ({ children, alignContent = 'top' }: containerProps) => {
   return <View style={[styles.content, styles[alignContent]]}>{children}</View>
 }
 
-
-
 const styles = StyleSheet.create({
   content: {
     flex: 1,

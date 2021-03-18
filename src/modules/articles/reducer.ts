@@ -1,10 +1,17 @@
 import * as constants from './constants';
-import { ArticlesStoreProps } from './types'
+import { ArticlesStoreProps, ArticleProps } from './types'
+
+const articleInitialState: ArticleProps = {
+  title: '',
+  abstract: '',
+  url: ''
+}
 
 const initialState: ArticlesStoreProps = {
   articlesRequesting: false,
   errored: false,
   errorMsg: '',
+  articleDetail: articleInitialState,
   data: [],
 };
 
@@ -42,6 +49,11 @@ const articlesReducer = (state = Object.assign({}, initialState), action: any) =
         errored: true,
         errorMsg: payload,
       };
+
+    case constants.ARTICLE_DETAIL_FULLFILLED:
+      return { ...Object.assign({}, state), articleDetail: payload };
+    case constants.CLEAR_ARTICLE_DETAIL:
+      return { ...state, articlesRequesting: true, articleDetail: articleInitialState };
     default:
       return state;
   }

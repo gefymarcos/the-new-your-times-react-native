@@ -8,5 +8,6 @@ export type ArticlesStoreProps = {
   articlesRequesting: boolean,
   errored: boolean,
   errorMsg: string,
+  articleDetail: ArticleProps,
   data: ArticleProps[]
 }

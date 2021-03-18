@@ -1,52 +1,55 @@
-import * as React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React, {useState} from 'react'
+import { Text, View, StyleSheet, TouchableNativeFeedback } from 'react-native'
 import theme from '../../styles/theme'
+import { showArticleDetailAction } from '../../modules/articles/actions'
+import { useDispatch } from 'react-redux'
 
-type cardProps = {
+export type cardProps = {
   title: string,
-  paragraph: string,
+  abstract: string,
   url: string
 }
 
-const Card = ({ title, paragraph, url }: cardProps) => {
+const Card = ({ title, abstract, url }: cardProps) => {
+  const dispatch = useDispatch()
   return (
-    <View style={styles.card}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.paragraph}>
-        {paragraph}
-      </Text>
-      <Text style={styles.url}>
-        {url}
-      </Text>
-    </View>
+    <TouchableNativeFeedback onPress={() => dispatch(showArticleDetailAction({title, abstract, url}))}>
+      <View style={styles.wrapperCard}>
+        <View style={styles.card}>
+          <Text style={styles.title}>{title}</Text>
+        </View>
+      </View>
+    </TouchableNativeFeedback>
   )
 }
 
 const styles = StyleSheet.create({
-  card: {
-    margin: 8,
-    paddingBottom: 16,
-    justifyContent: 'center',
+  wrapperCard: {
     borderBottomColor: theme.colors.black,
     borderBottomWidth: 1,
+    marginHorizontal: theme.spacings.xsmall,
+  },
+  card: {
+    paddingVertical: theme.spacings.medium,
+    justifyContent: 'center',
   },
   url: {
-    marginHorizontal: 16,
-    fontSize: 12,
+    marginHorizontal: theme.spacings.xsmall,
+    fontSize: theme.font.sizes.small,
     color: theme.colors.lightGray
   },
   title: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    marginVertical: 8,
-    marginHorizontal: 16,
+    fontWeight: '600',
+    fontSize: theme.font.sizes.large,
+    marginVertical: theme.spacings.xxsmall,
+    marginHorizontal: theme.spacings.xsmall,
     color: theme.colors.black
   },
-  paragraph: {
-    fontSize: 16,
-    lineHeight: 24,
-    marginVertical: 8,
-    marginHorizontal: 16,
+  abstract: {
+    fontSize: theme.font.sizes.medium,
+    lineHeight: theme.spacings.small,
+    marginVertical: theme.spacings.xxsmall,
+    marginHorizontal: theme.spacings.xsmall,
     color: theme.colors.black
   },
 })

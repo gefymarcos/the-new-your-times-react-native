@@ -8,7 +8,7 @@ jest.useFakeTimers()
 
 const props = {
   title: 'Title of card',
-  paragraph: 'Description',
+  abstract: 'Description',
   url: 'https://myurl.com.br'
 }
 

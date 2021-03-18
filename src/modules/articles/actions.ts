@@ -2,6 +2,7 @@ import { get } from '../../api';
 import * as constants from './constants';
 import { ArticleProps } from './types'
 import endpoints from './endpoints';
+import { cardProps } from '../../components/Card';
 
 const articlesRequest = () => ({
   type: constants.ARTICLES_REQUEST,
@@ -68,7 +69,31 @@ const loadArticlesAction = (section: string) => {
   };
 };
 
+
+const showArticleDetailFullFilled = (article: ArticleProps) => {
+
+};
+
+const showArticleDetailAction = ({title, abstract, url}: cardProps) => {
+  return async (dispatch: any) => {
+    dispatch(
+      {
+        type: constants.ARTICLE_DETAIL_FULLFILLED,
+        payload: { title, abstract, url },
+      }
+    )
+  };
+}
+
+const clearArticleSelectedAction = () => {
+  return async (dispatch: any) => {
+    dispatch({ type: constants.CLEAR_ARTICLE_DETAIL })
+  };
+}
+
 export {
   loadArticlesAction,
-  selectArticleAction
+  selectArticleAction,
+  showArticleDetailAction,
+  clearArticleSelectedAction
 };
