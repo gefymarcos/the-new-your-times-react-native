@@ -29,8 +29,6 @@ export default function Articles({
   const error = useSelector((state: any) => state?.articles?.errorMsg);
   const article = useSelector((state: any) => state?.articles?.articleDetail);
 
-  console.log('t->> ', article)
-
   React.useEffect(() => {
     dispatch(loadArticlesAction('science'));
   }, []);

@@ -1,13 +1,30 @@
-import React, { useState } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View } from "react-native";
+import React, { useState, useCallback } from "react";
+import { Linking, Modal, StyleSheet, Text, Pressable, View, Button } from "react-native";
 import { ArticleProps } from '../../modules/articles/types';
 import theme from '../../styles/theme'
 import { clearArticleSelectedAction } from '../../modules/articles/actions'
 import { useDispatch } from "react-redux";
 
+
+type openUrlLink = {
+  url: string,
+}
+
 const BackDrop = ({ title, abstract, url }: ArticleProps) => {
   const [modalVisible, setModalVisible] = useState(true);
   const dispatch = useDispatch()
+
+  const OpenUrlLink = ({ url }: openUrlLink) => {
+    const handlePress = useCallback(async () => {
+      const supported = await Linking.canOpenURL(url);
+
+      if (supported) {
+        await Linking.openURL(url);
+      }
+    }, [url]);
+
+    return <Button title={url} onPress={handlePress} />;
+  };
 
   return (
     <View style={styles.centeredView}>
@@ -26,9 +43,7 @@ const BackDrop = ({ title, abstract, url }: ArticleProps) => {
               <Text style={styles.abstract}>
                 {abstract}
               </Text>
-              <Text style={styles.url}>
-                {url}
-              </Text>
+              <OpenUrlLink url={url} />
             </View>
             <Pressable
               style={[styles.button, styles.buttonClose]}
