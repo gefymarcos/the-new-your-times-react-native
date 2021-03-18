@@ -1,5 +1,5 @@
 const routes = {
-  articles: (section?: string) => `${section}.json`,
-};
+  articles: (section?: string) => `${section}.json`
+}
 
-export default routes;
+export default routes

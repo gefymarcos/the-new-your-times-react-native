@@ -1,30 +1,37 @@
-import React, { useState, useCallback } from "react";
-import { Linking, Modal, StyleSheet, Text, Pressable, View, Button } from "react-native";
-import { ArticleProps } from '../../modules/articles/types';
+import React, { useState, useCallback } from 'react'
+import {
+  Linking,
+  Modal,
+  StyleSheet,
+  Text,
+  Pressable,
+  View,
+  Button
+} from 'react-native'
+import { ArticleProps } from '../../modules/articles/types'
 import theme from '../../styles/theme'
 import { clearArticleSelectedAction } from '../../modules/articles/actions'
-import { useDispatch } from "react-redux";
-
+import { useDispatch } from 'react-redux'
 
 type openUrlLink = {
-  url: string,
+  url: string
 }
 
 const BackDrop = ({ title, abstract, url }: ArticleProps) => {
-  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible, setModalVisible] = useState(true)
   const dispatch = useDispatch()
 
   const OpenUrlLink = ({ url }: openUrlLink) => {
     const handlePress = useCallback(async () => {
-      const supported = await Linking.canOpenURL(url);
+      const supported = await Linking.canOpenURL(url)
 
       if (supported) {
-        await Linking.openURL(url);
+        await Linking.openURL(url)
       }
-    }, [url]);
+    }, [url])
 
-    return <Button title={url} onPress={handlePress} />;
-  };
+    return <Button title={url} onPress={handlePress} />
+  }
 
   return (
     <View style={styles.centeredView}>
@@ -33,16 +40,14 @@ const BackDrop = ({ title, abstract, url }: ArticleProps) => {
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
-          setModalVisible(!modalVisible);
+          setModalVisible(!modalVisible)
         }}
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <View style={styles.card}>
               <Text style={styles.title}>{title}</Text>
-              <Text style={styles.abstract}>
-                {abstract}
-              </Text>
+              <Text style={styles.abstract}>{abstract}</Text>
               <OpenUrlLink url={url} />
             </View>
             <Pressable
@@ -58,25 +63,25 @@ const BackDrop = ({ title, abstract, url }: ArticleProps) => {
         </View>
       </Modal>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22
   },
   modalView: {
     marginTop: 50,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderRadius: 20,
     padding: 35,
-    alignItems: "center",
+    alignItems: 'center',
     width: '100%',
     flex: 1,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2
@@ -91,21 +96,21 @@ const styles = StyleSheet.create({
     elevation: 2
   },
   buttonClose: {
-    backgroundColor: theme.colors.secondary,
+    backgroundColor: theme.colors.secondary
   },
   textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
     width: 150
   },
   modalText: {
     marginBottom: 15,
-    textAlign: "center"
+    textAlign: 'center'
   },
   card: {
     paddingVertical: theme.spacings.medium,
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   url: {
     marginHorizontal: theme.spacings.xsmall,
@@ -125,7 +130,7 @@ const styles = StyleSheet.create({
     marginVertical: theme.spacings.xxsmall,
     marginHorizontal: theme.spacings.xsmall,
     color: theme.colors.black
-  },
-});
+  }
+})
 
-export default BackDrop;
+export default BackDrop

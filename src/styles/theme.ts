@@ -27,7 +27,7 @@ export default {
     white: '#FAFAFA',
     black: '#212121',
     lightGray: '#9e9e9e',
-    gray: '#424242',
+    gray: '#424242'
   },
   spacings: {
     xxsmall: 8,

@@ -2,8 +2,8 @@ import * as React from 'react'
 import { StyleSheet } from 'react-native'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
-import { useDispatch } from 'react-redux';
-import { loadArticlesAction } from '../../modules/articles/actions';
+import { useDispatch } from 'react-redux'
+import { loadArticlesAction } from '../../modules/articles/actions'
 import Science from '../../pages/Science'
 import Technology from '../../pages/Technology'
 import theme from '../../styles/theme'
@@ -27,14 +27,14 @@ const Tabs = () => {
           options={{
             tabBarLabel: 'Science',
             tabBarIcon: 'test-tube',
-            tabBarColor: theme.colors.lightGray,
+            tabBarColor: theme.colors.lightGray
           }}
           listeners={{
             tabPress: () => {
-              dispatch(loadArticlesAction('science'));
+              dispatch(loadArticlesAction('science'))
             }
           }}
-          key='TabScience'
+          key="TabScience"
         />
         <MaterialBottomTabs.Screen
           name="TabTechnology"
@@ -46,10 +46,10 @@ const Tabs = () => {
           }}
           listeners={{
             tabPress: () => {
-              dispatch(loadArticlesAction('technology'));
+              dispatch(loadArticlesAction('technology'))
             }
           }}
-          key='TabTechnology'
+          key="TabTechnology"
         />
       </MaterialBottomTabs.Navigator>
     </NavigationContainer>
