@@ -15,7 +15,8 @@ A aplicação é um portal de notícias utilizando React Native para exibição 
 - Rodar o comando ```yarn``` para instalar as dependências;
 - Copiar o conteúdo do arquivo ```.env.example``` para um novo arquivo chamado ```.env```;
 - Preencher as chaves do mesmo de acordo com as suas informações obtidas em: https://developer.nytimes.com/get-started
-- Executar ```yarn start``` para rodar o aplicativo.
+- Para executar no Android: ```yarn android```
+- Para executar no IOS: ```yarn start```
 
 ## Comandos disponíveis
 
