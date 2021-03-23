@@ -2,7 +2,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
+    "android": "expo start --lan -c",
     "ios": "expo start --ios",
     "eject": "expo eject",
     "prettier": "yarn prettier --write .",
