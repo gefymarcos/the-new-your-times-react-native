@@ -25,9 +25,3 @@ A aplicação é um portal de notícias utilizando React Native para exibição 
 - ```yarn ios``` : Executar a aplicação no simulador Ios;
 - ```yarn test```: Executar os testes da aplicação.
 
-## TODOs
-
-- Criar o type para o RootState e remover as declarações any;
-- Usar o tema em todos os estilos da aplicação;
-- Configurar o absolute path;
-- Aumentar cobertura de teste.
